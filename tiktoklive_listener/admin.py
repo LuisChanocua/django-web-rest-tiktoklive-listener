@@ -11,6 +11,6 @@ class TikTokStreamerAdmin(admin.ModelAdmin):
 
 @admin.register(TikTokComment)
 class TikTokCommentAdmin(admin.ModelAdmin):
-    list_display = ("streamer", "tiktok_nickname", "text", "received_at")
-    search_fields = ("text", "tiktok_nickname", "tiktok_user_id")
+    list_display = ("streamer", "tiktok_user_id", "tiktok_nickname", "text", "received_at")
+    search_fields = ("text", "tiktok_user_id", "tiktok_nickname", "tiktok_user_id")
     list_filter = ("streamer",)
