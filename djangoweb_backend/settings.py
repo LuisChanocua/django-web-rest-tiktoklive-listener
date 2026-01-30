@@ -25,6 +25,9 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=lambda v: [s.strip() for s in v.split(',')])
 
+# Token para comunicación interna con el listener de TikTok
+INTERNAL_LISTENER_TOKEN = config('INTERNAL_LISTENER_TOKEN', default="super-secret-token")
+
 # Application definition
 
 # Configuración del modelo de usuario personalizado
@@ -40,6 +43,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'whitenoise.runserver_nostatic',  # Para servir archivos estáticos en desarrollo
+    'tiktoklive_listener',
+    'access_control',
 ]
 
 MIDDLEWARE = [
