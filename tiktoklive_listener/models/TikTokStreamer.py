@@ -10,6 +10,8 @@ class TikTokStreamer(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    should_listen = models.BooleanField(default=False)
+    
     class Meta:
         db_table = "tiktok_streamers"
 
