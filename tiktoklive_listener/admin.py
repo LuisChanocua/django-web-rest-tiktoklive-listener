@@ -4,7 +4,7 @@ from .models import TikTokStreamer, TikTokComment, TikTokListenerConfig
 # Register your models here.
 @admin.register(TikTokStreamer)
 class TikTokStreamerAdmin(admin.ModelAdmin):
-    list_display = ("username", "display_name", "is_active", "created_at")
+    list_display = ("username", "display_name", "is_active", "should_listen", "created_at")
     search_fields = ("username", "display_name")
     list_filter = ("is_active",)
 
