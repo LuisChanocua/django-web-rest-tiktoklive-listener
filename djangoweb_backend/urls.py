@@ -21,5 +21,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("api/", include("tiktoklive_listener.urls")),
+    path('api/', include('tiktoklive_listener.urls')),
+    path('api/lookerstudio/', include('lookerstudio_proxy.urls')),
 ]
